@@ -35,14 +35,15 @@ StartHub is a social media platform designed to connect aspiring entrepreneurs a
   - npm - Node package manager for managing project dependencies
 
 
-## Screenshots
-- ![Screenshot 1](https://github.com/rohitdhamale28/Bluebit/assets/123472738/c28b8bad-d220-4935-bc2b-165cb095916c)
 
 ## Deployed Url
 [Link to Deployed Solution](https://starthub.onrender.com/)
 
 ## Video Url
 [Link to Demo Video](https://starthub.onrender.com/)
+
+## Screenshots
+- ![Screenshot 1](https://github.com/rohitdhamale28/Bluebit/assets/123472738/c28b8bad-d220-4935-bc2b-165cb095916c)
 
 ## Remarks
 StartHub aims to provide a seamless and engaging platform for entrepreneurs. Feel free to explore, connect, and innovate within the StartHub community.
