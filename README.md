@@ -41,7 +41,7 @@ StartHub is a social media platform designed to connect aspiring entrepreneurs a
 [Link to Deployed Solution](your_deployed_url_here)
 
 ## Video Url
-[Link to Demo Video](your_video_url_here)
+[Link to Demo Video](https://drive.google.com/drive/folders/12Z0AEA0BEWFSWBPIQBatE0JCpWCl4EQ3?usp=sharing)
 
 ## Remarks
 StartHub aims to provide a seamless and engaging platform for entrepreneurs. Feel free to explore, connect, and innovate within the StartHub community.
