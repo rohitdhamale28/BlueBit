@@ -22,7 +22,7 @@ main()
 // used to form a connection
  async function main(){
  // this is to connect with local 
-  await mongoose.connect("mongodb+srv://rohitdhamale22:5pKtPUyH38lxe7ls@cluster0.v4tits4.mongodb.net/?retryWrites=true&w=majority");
+  await mongoose.connect("mongodb+srv://rohitdhamale22:5pKtPUyH38lxe7ls@cluster0.v4tits4.mongodb.net/  ");
 // this is to connect with Mongodb Atlas 
 // await mongoose.connect(dbURL);
  }

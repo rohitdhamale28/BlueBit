@@ -17,9 +17,8 @@ const User = require("./models/user.js");
 const Blog = require("./models/blog.js");
 const StartUp = require("./models/startup.js");
 
-
 const store= MongoStore.create({
-  mongoUrl: "mongodb+srv://rohitdhamale22:5pKtPUyH38lxe7ls@cluster0.v4tits4.mongodb.net/?retryWrites=true&w=majority",
+  mongoUrl: "mongodb+srv://rohitdhamale22:5pKtPUyH38lxe7ls@cluster0.v4tits4.mongodb.net/  ",
   crypto: {
     secret:"jabvkjabn",
   },
