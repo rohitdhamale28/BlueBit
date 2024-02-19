@@ -1,0 +1,60 @@
+<% layout("/layouts/boilerplate") %>
+<!-- this is the boilerplate imported using ejs-mate -->
+<body>
+  <br />
+  <br />
+  <h2>Create A New Blog Or Idea</h2>
+  <!-- form with enctype is capable of sending file to database -->
+  <form
+    method="POST"
+    action="/users/<%= id %>/blog"
+    class="needs-validation"
+    novalidate
+    
+   
+  >
+    <div>
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        name="blog[title]"
+        class="form-control"
+        id="title"
+        style="width: 500px;"
+        placeholder="Title"
+        required
+      />
+      <div class="invalid-feedback">Please Enter Title</div>
+    </div>
+    <br />
+    <div>
+      <label for="comment" class="form-label">Blog</label>
+      <textarea
+        name="blog[comment]"
+        class="form-control"
+        id="comment"
+        cols="30"
+        rows="10"
+        placeholder="Blog"
+        required
+      ></textarea>
+      <div class="invalid-feedback">Please Enter Blog</div>
+    </div>
+    <br />
+    <div>
+      <label for="domain" class="form-label">Domain</label>
+      <input
+        type="text"
+        name="blog[domain]"
+        class="form-control"
+        placeholder="Enter Domain"
+        style="width: 500px;"
+      />
+    </div>
+    <div class="invalid-feedback">Please Enter Domain</div>
+    <br />
+
+    <button class="btn btn-dark">Add</button>
+  </form>
+
+</body>

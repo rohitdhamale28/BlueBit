@@ -1,0 +1,82 @@
+<% layout("/layouts/boilerplate") %>
+<!-- this is the boilerplate imported using ejs-mate -->
+<body>
+  <br />
+  <br />
+  <h2>Contact Us</h2>
+  <!-- form with enctype is capable of sending file to database -->
+  <form
+    method="POST"
+    action="/contact"
+    class="needs-validation"
+    novalidate
+
+  >
+    <div>
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        name="contact[name]"
+        class="form-control"
+        id="name"
+        placeholder="Enter Name"
+        required
+      />
+      <div class="invalid-feedback">Please Enter Name</div>
+    </div>
+    <br />
+
+    <div>
+      <label for="email" class="form-label">Email</label>
+      <input type="email" name="contact[email]"  class="form-control" placeholder="Enter email" required>
+      <div class="invalid-feedback">Please Enter email</div>
+
+  </div>
+  <br>
+  <div>
+    <label for="phone" class="form-label">Phone No.</label>
+    <input
+      type="number"
+      name="contact[phone]"
+      class="form-control"
+      placeholder="Enter Phone No."
+    />
+    <div class="invalid-feedback">Please Enter Phone No.</div>
+
+  </div>
+  <br>
+    <div>
+      <label for="subject" class="form-label">Subject</label>
+      <textarea
+        name="contact[subject]"
+        class="form-control"
+        id="subject"
+        cols="30"
+        rows="10"
+        placeholder="Subject"
+        required
+      ></textarea>
+      <div class="invalid-feedback">Please Enter Subject</div>
+    </div>
+    <br />
+   
+ 
+    <div>
+      <label for="course" class="form-label">Course</label>
+      <input
+        type="text"
+        name="contact[course]"
+        class="form-control"
+        id="course"
+        placeholder="course"
+        required
+      />
+      <div class="invalid-feedback">Please Enter Course</div>
+    </div>
+    <br />
+   
+    <button class="btn btn-dark">Submit</button>
+  </form>
+  <br />
+  <br />
+</body>

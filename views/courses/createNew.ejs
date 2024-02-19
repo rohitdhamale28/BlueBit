@@ -1,0 +1,108 @@
+<% layout("/layouts/boilerplate") %>
+<!-- this is the boilerplate imported using ejs-mate -->
+<body>
+  <br />
+  <br />
+  <h2>Create A New Course</h2>
+  <!-- form with enctype is capable of sending file to database -->
+  <form
+    method="POST"
+    action="/courses"
+    class="needs-validation"
+    novalidate
+    style="width: 500px;"
+    enctype="multipart/form-data"
+  >
+    <div>
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        name="course[title]"
+        class="form-control"
+        id="title"
+        placeholder="Title"
+        style="width: 500px;"
+        required
+      />
+      <div class="invalid-feedback">Please Enter Title</div>
+    </div>
+    <br />
+    <div>
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        name="course[description]"
+        class="form-control"
+        id="description"
+        cols="30"
+        rows="10"
+        placeholder="Description"
+        required
+      ></textarea>
+      <div class="invalid-feedback">Please Enter Description</div>
+    </div>
+    <br />
+    <div>
+      <label for="image" class="form-label">Image Link</label>
+      <input
+        type="text"
+        name="course[image]"
+        class="form-control"
+        style="width: 500px;"
+        placeholder="Enter url link"
+      />
+    </div>
+    <div class="invalid-feedback">Please Enter Image URL</div>
+    <br />
+<!-- but we can't directly send our file to db  , we have to use multer package -->
+    <!-- <div>
+      <label for="image" class="form-label">Image File</label>
+      <input type="file" name="course[image]" class="form-control" required/>
+    </div>
+    <br /> -->
+    <div>
+      <label for="price" class="form-label">Price</label>
+      <input
+        type="text"
+        name="course[price]"
+        class="form-control"
+        id="price"
+        style="width: 500px;"
+        placeholder="Price"
+        required
+      />
+      <div class="invalid-feedback">Please Enter Price</div>
+    </div>
+    <br />
+    <div>
+      <label for="domain" class="form-label">Domain</label>
+      <input
+        type="text"
+        name="course[domain]"
+        class="form-control"
+        id="domain"
+        style="width: 500px;"
+        placeholder="domain"
+        required
+      />
+      <div class="invalid-feedback">Please Enter Domain</div>
+    </div>
+    <br />
+    <div>
+      <label for="country" class="form-label">Country</label>
+      <input
+        type="text"
+        name="course[country]"
+        class="form-control"
+        id="country"
+        style="width: 500px;"
+        placeholder="Country"
+        required
+      />
+      <div class="invalid-feedback">Please Enter Country</div>
+    </div>
+    <br />
+    <button class="btn btn-dark">Add</button>
+  </form>
+  <br />
+  <br />
+</body>

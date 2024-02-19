@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+<!-- this is the boilerplate imported using ejs-mate -->
+<body>
+    <br>
+    <br>
+    <h2>SignUp</h2>
+    <form method="POST" action="/signup" class="needs-validation" novalidate>
+        <div>
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" id="username" placeholder="Username" style="width: 500px;" required>
+            <div class="invalid-feedback">Please enter a username.</div>
+        </div>
+        <br>
+        <label for="type">Type</label><br>
+       
+        <input type="radio" id="student" name="type" value="student">
+        <label for="student">Student</label><br>
+        <input type="radio" id="entrepreneur" name="type" value="entrepreneur">
+        <label for="entrepreneur">Entrepreneur</label>
+        <br>
+        <div>
+            <label for="startup" class="form-label">StartUp Or College</label>
+            <input type="text" name="startup" class="form-control" placeholder="Enter Your StartUp or College" style="width: 500px;" required>
+            <div class="invalid-feedback">Please enter StartUp Or College</div>
+            
+        </div>
+        <br>
+        <div>
+            <label for="post" class="form-label">Post Or Course of Study</label>
+            <input type="text" name="post" class="form-control" placeholder="Enter Your Post or Course of Study" style="width: 500px;" required>
+            <div class="invalid-feedback">Please enter Post Or Course of Study</div>
+            
+        </div>
+        <br>
+        <div>
+            <label for="skills" class="form-label">Skills or Domain</label>
+            <input type="text" name="skills" class="form-control" placeholder="Enter Your Skill or Domain" style="width: 500px;" required>
+            <div class="invalid-feedback">Please enter a Skills or Domain</div>
+            
+        </div>
+        <br>
+        <div>
+            <label for="image" class="form-label">Image Link</label>
+            <input
+              type="text"
+              name="image"
+              style="width: 500px;"
+              class="form-control"
+              placeholder="Enter url link"
+            />
+          </div>
+          <div class="invalid-feedback">Please Enter Image URL</div>
+          <br />
+        <div>
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Enter email" style="width: 500px;" required>
+            <div class="invalid-feedback">Please enter an email.</div>
+        </div>
+        <br>
+        <div>
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Enter Password" style="width: 500px;">
+            <div class="invalid-feedback">Please enter a password.</div>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-primary">Sign Up</button>
+    </form>
+    <br><br>
+    <form method="get" action="/login">
+        <button class="btn btn-dark">Login</button>
+
+    </form>
+        
+
+ 
+    <br>
+    <br>
+</body>
