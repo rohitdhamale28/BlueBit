@@ -1,4 +1,4 @@
-# StartHub
+# MRP coders - StartHub
 *Developing a Social Media Platform for Entrepreneurs and Startups*
 
 ## Description
