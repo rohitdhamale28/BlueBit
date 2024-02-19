@@ -40,7 +40,7 @@ StartHub is a social media platform designed to connect aspiring entrepreneurs a
 [Link to Deployed Solution](https://starthub.onrender.com/)
 
 ## Video Url
-[Link to Demo Video](https://starthub.onrender.com/)
+[Link to Demo Video](https://drive.google.com/drive/folders/12Z0AEA0BEWFSWBPIQBatE0JCpWCl4EQ3?usp=drive_link)
 
 ## Screenshots
 - ![Screenshot 1](https://github.com/rohitdhamale28/Bluebit/assets/123472738/c28b8bad-d220-4935-bc2b-165cb095916c)
