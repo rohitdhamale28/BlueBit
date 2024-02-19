@@ -18,21 +18,21 @@ const Blog = require("./models/blog.js");
 const StartUp = require("./models/startup.js");
 
 
-// const store= MongoStore.create({
-//   mongoUrl: "mongodb+srv://rohitdhamale05:cM79cg.PxW9N7uz@cluster0.82ltj62.mongodb.net/",
-//   crypto: {
-//     secret:"jabvkjabn",
-//   },
-//   touchAfter: 24*60*60,//seesion time in sessions
-// });
+const store= MongoStore.create({
+  mongoUrl: "mongodb+srv://rohitdhamale22:5pKtPUyH38lxe7ls@cluster0.v4tits4.mongodb.net/?retryWrites=true&w=majority",
+  crypto: {
+    secret:"jabvkjabn",
+  },
+  touchAfter: 24*60*60,//seesion time in sessions
+});
 
-// store.on("error", ()=>{
-//   console.log("Error in MONGO SESSION STORE", err);
-// })
+store.on("error", ()=>{
+  console.log("Error in MONGO SESSION STORE", err);
+})
 
 
 const sessionOptions = {
-  // store,
+  store,
   secret: "jabvkjabn",
   resave: false,
   saveUninitialized: true,
@@ -76,7 +76,7 @@ main()
 // used to form a connection
 async function main() {
   // this is to connect with local 
-  await mongoose.connect("mongodb://127.0.0.1:27017/bluebit");
+  await mongoose.connect("mongodb+srv://rohitdhamale22:5pKtPUyH38lxe7ls@cluster0.v4tits4.mongodb.net/?retryWrites=true&w=majority");
 
 }
 
