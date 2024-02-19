@@ -10,12 +10,13 @@
           <li><a href="/about">About Us</a></li>
           <li><a href="/courses">Courses</a></li>
           <li><a href="/users">Entrepreneur</a></li>
+          <li><a href="/startup">StartUps</a></li>
           <li><a href="/contact">Contact Us</a></li>
           <% if (!currentUser) {%>
           <li><a href="/signup">Sign Up</a></li>
           <li><a href="/login">Login</a></li>
           <% } %> <% if (currentUser) {%>
-          <li><a href="/courses/new">Add New Coures</a></li>        
+                
           <li><a href="/logout">Logout</a></li>
           <% } %>
         </ul>

@@ -31,6 +31,7 @@
           <a class="nav-link "  href="/">Home</a>
           <a href="/about" class="nav-link">About Us</a>
           <a href="/courses" class="nav-link">Courses</a>
+          <a href="/startup" class="nav-link">StartUps</a>
           <a href="/users" class="nav-link">Entrepreneur</a>
           <a href="/contact" class="nav-link">Contact Us</a>
           <% if (!currentUser) {%>
@@ -38,7 +39,7 @@
             <a class="nav-link" href="/login">Login</a>
           <% } %>
           <% if (currentUser) {%>
-            <a class="nav-link" href="/courses/new">Add New Courses</a>
+          
             <a class="nav-link" href="/logout">Logout</a>
           <% } %>
          
@@ -51,34 +52,34 @@
     <div class="container">
         <%- include("../includes/flash.ejs") %>    
         <br />
-        <div class="tittle"><h3><%= showCourses.title %></h3></div>
+        <div class="tittle"><h3><%= startup.title %></h3></div>
 
   <div class="card offset-3 col-6">
     <div class="img">
-      <img src="<%= showCourses.image %>" class="card-img-top" alt="..." />
+      <img src="<%= startup.image %>" class="card-img-top" alt="..." />
     </div>
     <br />
     <div class="card-body">
       <h5 class="card-title"></h5>
-      <h5>Owned by <%= showCourses.owner.username %></h5>
-      <p class="card-text"><%= showCourses.description %></p>
+      <h5>Owned by <%= startup.owner.username %></h5>
+      <p class="card-text"><%= startup.description %></p>
       <ul>
-        <li>Price: &#8377; <%= showCourses.price %></li>
-        <li>Location:<%= showCourses.domain %></li>
-        <li>Country: <%= showCourses.country %></li>
+        <li>Net Worth: &#8377; <%= startup.networth %></li>
+        <li>Domain:<%= startup.domain %></li>
+        <li>Country: <%= startup.country %></li>
       </ul>
 
-      <% if (currentUser && currentUser._id.equals(showCourses.owner._id)) { %>
+      <% if (currentUser && currentUser._id.equals(startup.owner._id)) { %>
       <div class="btns">
         <a
-          href="/courses/<%= showCourses._id  %>/edit"
+          href="/startup/<%= startup._id  %>/edit"
           class="btn btn-primary"
           >Edit</a
         >
         <br /><br />
         <form
           method="POST"
-          action="/courses/<%= showCourses._id  %>?_method=DELETE"
+          action="/startup/<%= startup._id  %>?_method=DELETE"
         >
           <button class="btn btn-dark">Delete</button>
         </form>
@@ -86,78 +87,10 @@
 
       <% } %>
     </div>
-    <hr />
-    <% if (currentUser ) { %>
-
-    <div class="col-8 offset-3 mb-3">
-      <h4>Leave A Review</h4>
-      <form
-        method="post"
-        action="/courses/<%= showCourses._id%>/reviews"
-        novalidate
-        class="needs-validation"
-      >
-
-        <div class="mb-3 mt-3">
-        <label for="rating" class="form-label">Rating</label>
-        <fieldset class="starability-slot">
-          <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating." />
-          <input type="radio" id="first-rate1" name="review[rating]" value="1" />
-          <label for="first-rate1" title="Terrible">1 star</label>
-          <input type="radio" id="first-rate2" name="review[rating]" value="2" />
-          <label for="first-rate2" title="Not good">2 stars</label>
-          <input type="radio" id="first-rate3" name="review[rating]" value="3" />
-          <label for="first-rate3" title="Average">3 stars</label>
-          <input type="radio" id="first-rate4" name="review[rating]" value="4" />
-          <label for="first-rate4" title="Very good">4 stars</label>
-          <input type="radio" id="first-rate5" name="review[rating]" value="5" />
-          <label for="first-rate5" title="Amazing">5 stars</label>
-        </fieldset>
-      </div>
-        <div class="mb-3 mt-3">
-          <label for="comment" class="form-label" required>Comment</label>
-          <textarea
-            name="review[comment]"
-            id="comment"
-            class="form-control"
-            cols="30"
-            rows="5"
-          ></textarea>
-        </div>
-        <button class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-    <% } %>
-    <div class="review">
-      <h4>Reviews</h4>
-      <div class="row">
-        <% for(review of showCourses.reviews){%>
-        <div class="card col-5 ms-3 mb-3">
-          <div class="card-body">
-            <h5><%= review.author.username %></h5>
-            <p><%= review.comment %></p>
-            <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
-            <% if ((currentUser &&
-            currentUser._id.equals(showCourses.owner._id)) || (currentUser &&
-            currentUser._id.equals(review.author._id)) ) { %>
-
-            <form
-              class="mb-3"
-              method="POST"
-              action="/courses/<%= showCourses._id%>/reviews/<%= review._id%>?_method=DELETE"
-            >
-              <button class="btn btn-dark">Delete</button>
-            </form>
-            <% } %>
-          </div>
-        </div>
-        <% } %>
-      </div>
-    </div>
-  </div>
+    
          
       
-    </div>
+   
 
    <footer>
   
@@ -169,7 +102,7 @@
             <i class="fa-brands fa-linkedin"></i>
  
          </div>
-         <div class="f-info-brand">&copy; Wanderlust Private Limited</div>
+         <div class="f-info-brand">&copy; StartHub Private Limited</div>
          <div class="f-info-links">
             <a href="/privacy">Privacy</a>
             <a href="/terms">Terms</a>

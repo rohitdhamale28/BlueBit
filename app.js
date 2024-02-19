@@ -15,6 +15,7 @@ const passport = require("passport");
 const localStratergy = require("passport-local");
 const User = require("./models/user.js");
 const Blog = require("./models/blog.js");
+const StartUp = require("./models/startup.js");
 
 
 // const store= MongoStore.create({
@@ -181,13 +182,33 @@ app.post("/users/:id/blog", isLoggedIn, async (req, res) => {
   let newBlog = new Blog(req.body.blog);
    newBlog.author= req.user._id;
   user.blogs.push(newBlog);
-  console.log(newBlog);
+  // console.log(newBlog);
   await newBlog.save();
   await user.save();
   req.flash("success","New Blog added");
   res.redirect(`/users/${id}`);
   // res.send("Review Saved");
 });
+
+// Start Up
+app.get("/startup", async(req, res) => {
+  const allStartUp = await StartUp.find({});
+  res.render("startup/index.ejs",{allStartUp});
+});
+
+
+app.get("/startup/:id", async (req, res) => {
+  let { id } = req.params;
+  const startup = await StartUp.findById(id).populate("owner");
+  // console.log(showCourses);
+  if(!startup){
+  req.flash("error"," Startup Not found");
+   res.redirect("/startup");
+  }
+  res.render("startup/show.ejs", { startup});
+});
+
+
 
 // if the user sends a request to route which doesn't exist
 app.all("*", (req, res, next) => {

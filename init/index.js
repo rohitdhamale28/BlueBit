@@ -1,12 +1,10 @@
-if (process.env.NODE_ENV != "production") {
-  require("dotenv").config();
-   // this means we don't have to upload this file in production enviornment
- }
+
 
 
 const mongoose= require("mongoose");
-const  initData= require("./data.js");
+const  initData= require("./startupdata.js");
 const Course= require("../models/course.js");
+const StartUp= require("../models/startup.js");
 
 
 // importing the mongodb atlas url
@@ -31,11 +29,11 @@ main()
 
 //  console.log(initData.sampleCourses);
  const initDB= async () => {
-    await Course.deleteMany({});
+    await StartUp.deleteMany({});
     // map() function is used to make changes , it actually creates a new array rather than making changes
     // here we are adding a owner to every Course , owner is 'rohit' with object_id '65a10de59f406151d2b192df' from users collection
-     initData.data= initData.data.map((obj)=> ({...obj, owner: '65d26ca9be86baf723ebd9cb'}));
-    await Course.insertMany(initData.data);
+     initData.data= initData.data.map((obj)=> ({...obj, owner: '65d2e30ddc465b74fd5af6a4'}));
+    await StartUp.insertMany(initData.data);
     console.log("data Initiallised");
  }
 
