@@ -7,9 +7,6 @@ const Course= require("../models/course.js");
 const StartUp= require("../models/startup.js");
 
 
-// importing the mongodb atlas url
-// const dbURL= process.env.ATLASDB_URL; 
-// const dbURL= "mongodb+srv://rohitdhamale05:cM79cg.PxW9N7uz@cluster0.82ltj62.mongodb.net/?retryWrites=true&w=majority";
 
 
 // console.log(dbURL);
@@ -22,7 +19,7 @@ main()
 // used to form a connection
  async function main(){
  // this is to connect with local 
-  await mongoose.connect("mongodb+srv://rohitdhamale22:5pKtPUyH38lxe7ls@cluster0.v4tits4.mongodb.net/  ");
+  await mongoose.connect("mongodb://127.0.0.1:27017/starthub");
 // this is to connect with Mongodb Atlas 
 // await mongoose.connect(dbURL);
  }

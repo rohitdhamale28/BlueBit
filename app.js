@@ -75,7 +75,7 @@ main()
 // used to form a connection
 async function main() {
   // this is to connect with local 
-  await mongoose.connect("mongodb+srv://rohitdhamale22:5pKtPUyH38lxe7ls@cluster0.v4tits4.mongodb.net/?retryWrites=true&w=majority");
+  await mongoose.connect("mongodb://127.0.0.1:27017/starthub");
 
 }
 
